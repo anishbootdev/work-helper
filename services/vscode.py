@@ -1,12 +1,13 @@
 import subprocess
 import os
 
-def open_vs_code(filepath, branch="master"):
+def open_vs_code(filepath, branch):
     if not filepath:
         return False
     try:
         subprocess.Popen(["code", filepath, "-n"])
-        subprocess.run(["git", "checkout", branch], cwd=filepath, capture_output=True, text=True, check=True)
+        if branch:
+            subprocess.run(["git", "checkout", branch], cwd=filepath, capture_output=True, text=True, check=True)
         return True
     except Exception:
         return False

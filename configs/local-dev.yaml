@@ -1,0 +1,7 @@
+steps:
+  - type: docker
+    filepath: Desktop/TWID/issuer-service/deployment/dev/docker-compose.yml
+  - type: vscode
+    filepath: Desktop/TWID/issuer-service
+  - type: tmux
+    command: docker logs -f twidpay

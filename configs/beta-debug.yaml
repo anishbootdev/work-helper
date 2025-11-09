@@ -1,0 +1,13 @@
+steps:
+  - type: vpn
+    name : twid_beta
+  - type: browser
+    urls :
+    - https://pwa.beta.twidapp.com/demo-init
+    - https://dbphpmyadmin.beta.twidapp.com/index.php
+    - https://system.beta.twidapp.com/dashboard
+    - https://jenkins.twidapp.com/job/issuer-service-all/job/issuer-service/
+    - https://18.60.56.115/app/discover#/?_a=(columns:!(context.s3-issuer-log,message),filters:!(),index:'534a2841-7eb1-4b58-b2f5-bb56f2d54256',interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc)))&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))
+  - type: vscode
+    filepath: Desktop/TWID/issuer-service
+    branch: beta
