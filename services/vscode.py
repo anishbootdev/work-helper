@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-def open_vs_code(filepath, branch):
+def open_vs_code(filepath, branch=None):
     if not filepath:
         return False
     try:

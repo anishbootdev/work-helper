@@ -1,6 +1,6 @@
 steps:
   - type: vpn
-    name : twid_beta
+    vpn_name : twid-beta
   - type: browser
     urls :
     - https://pwa.beta.twidapp.com/demo-init

@@ -1,12 +1,12 @@
 steps:
   - type : vpn
-    name : twid
+    vpn_name : twid
   - type : browser
-    urls:
+    urls :
     - https://10.210.41.164/app/discover#/?notFound=search&notFoundMessage=Could%20not%20locate%20that%20search%20(id:%205ec98040-fa7b-11ef-8e18-9b248c6bc935)&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(columns:!(_source),filters:!(),index:ec961fe0-b05e-11ee-af23-b7e5f0eb91d3,interval:auto,query:(language:kuery,query:''),sort:!())
     - https://reports.twidpay.com/
-    - https://system.twidpay.com/
-    - https://monitoring.twidpay.com/d/OJjW_8zHk/issuer-api-details?orgId=1&from=now-6h&to=now&timezone=browser&var-issuer=gosats&var-issuer=flash&var-issuer=cred&var-issuer=intermiles&var-issuer=jupiter&var-issuer=npci&var-issuer=zillion&var-issuer=bobcard&var-issuer=loyaltyrewards&var-api=$__all
-  - type : vscode
+    - https://system-cug.twidpay.com/
+    - http://jenkins.local.twidpay.com/view/Issuer-service/job/issuer-service-full/job/issuer-service-preprod-v2/
+  - type: vscode
     filepath: Desktop/TWID/issuer-service
-    branch: master
+    branch: cug
