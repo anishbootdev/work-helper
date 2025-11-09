@@ -40,7 +40,8 @@ def get_config_and_run(env):
     if os.path.exists(full_path) and os.path.isfile(full_path):
         steps = read_config(full_path)
         run_functions(steps["steps"])
-    print("THIS CONFIG DOES NOT EXIST")
+    else:
+        print("THIS CONFIG DOES NOT EXIST")
 
 if len(sys.argv) < 2:
     print("pass in an env")
