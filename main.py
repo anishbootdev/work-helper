@@ -36,7 +36,8 @@ def run_functions(steps):
                 open_tmux(step['command'])
 
 def get_config_and_run(env):
-    full_path = os.path.join("./config", f"{env}.yaml")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    full_path = os.path.join(script_dir, "config", f"{env}.yaml")
     if os.path.exists(full_path) and os.path.isfile(full_path):
         steps = read_config(full_path)
         run_functions(steps["steps"])
